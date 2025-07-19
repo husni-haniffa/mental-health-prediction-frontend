@@ -96,15 +96,15 @@ const MentalHealthForm = () => {
 
   return (
     <>
-      <Card className="w-full max-w-md border-none shadow-2xl">
+      <Card className="w-full max-w-lg border-none shadow-2xl">
         <CardHeader className="text-center">
-          <CardTitle className="bg-gradient-to-r from-pink-600 to-blue-600 text-white p-2 rounded">Mental Health Assessment</CardTitle>
-          <CardDescription>
+          <CardTitle className="bg-gradient-to-r from-pink-600 to-blue-600 text-white p-2 rounded text-xl font-extrabold">Mental Health Assessment</CardTitle>
+          <CardDescription className="text-xl">
             Fill out the form to assess your mental health indicators.
             {result && (
               <div className="mt-4 p-4 bg-gray-100 rounded-md">
-                <Label className="block font-semibold">Prediction: {result.predicatedLabel}</Label>
-                <Label className="block font-semibold">Confidence: {result.confidenceScore}</Label>
+                <Label className="block font-semibold text-xl">Prediction: {result.predicatedLabel}</Label>
+                <Label className="block font-semibold text-xl">Confidence: {result.confidenceScore}</Label>
               </div>
             )}
           </CardDescription>
@@ -120,10 +120,11 @@ const MentalHealthForm = () => {
                   name={key as keyof z.infer<typeof featureSchema>}
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>{key}</FormLabel>
+                      <FormLabel className="font-bold text-xl">{key}</FormLabel>
                       <FormControl>
                         <Input
                           type="number"
+                          className="text-lg"
                           {...field}
                           onChange={(e) => {
                             const value = e.target.value;
@@ -147,7 +148,7 @@ const MentalHealthForm = () => {
               <CardFooter className="flex justify-end p-0 pt-4">
                 <Button 
                   type="submit" 
-                  className="w-full bg-gradient-to-r from-pink-600 to-blue-600 text-white"
+                  className="w-full bg-gradient-to-r from-pink-600 to-blue-600 text-white text-xl font-bold"
                   onClick={form.handleSubmit(onSubmit)}
                   disabled={isLoading}
                 >
