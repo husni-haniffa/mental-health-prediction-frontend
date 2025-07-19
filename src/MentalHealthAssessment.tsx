@@ -95,16 +95,16 @@ const MentalHealthForm = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center py-12 px-4">
+    <>
       <Card className="w-full max-w-md border-none shadow-2xl">
-        <CardHeader>
-          <CardTitle>Mental Health Assessment</CardTitle>
+        <CardHeader className="text-center">
+          <CardTitle className="bg-gradient-to-r from-pink-600 to-blue-600 text-white p-2 rounded">Mental Health Assessment</CardTitle>
           <CardDescription>
             Fill out the form to assess your mental health indicators.
             {result && (
               <div className="mt-4 p-4 bg-gray-100 rounded-md">
                 <Label className="block font-semibold">Prediction: {result.predicatedLabel}</Label>
-                <Label className="block">Confidence: {result.confidenceScore}</Label>
+                <Label className="block font-semibold">Confidence: {result.confidenceScore}</Label>
               </div>
             )}
           </CardDescription>
@@ -147,7 +147,7 @@ const MentalHealthForm = () => {
               <CardFooter className="flex justify-end p-0 pt-4">
                 <Button 
                   type="submit" 
-                  className="w-full bg-black text-white"
+                  className="w-full bg-gradient-to-r from-pink-600 to-blue-600 text-white"
                   onClick={form.handleSubmit(onSubmit)}
                   disabled={isLoading}
                 >
@@ -158,7 +158,7 @@ const MentalHealthForm = () => {
           </Form>
         </CardContent>
       </Card>
-    </div>
+    </>
   );
 };
 
