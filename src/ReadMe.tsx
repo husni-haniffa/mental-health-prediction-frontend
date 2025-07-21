@@ -11,7 +11,7 @@ import {
 
 const ReadMe = () => {
   return (
-    <Card className="w-full max-w-lg border-none shadow-2xl">
+    <Card className="w-full max-w-3xl border-none shadow-2xl">
       <CardHeader className="text-xl">
         <CardTitle className="text-red-600">Read Me!</CardTitle>
         <CardDescription className="text-green-600 font-bold text-lg">

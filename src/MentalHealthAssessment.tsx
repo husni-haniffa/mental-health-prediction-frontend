@@ -96,7 +96,7 @@ const MentalHealthForm = () => {
 
   return (
     <>
-      <Card className="w-full max-w-lg border-none shadow-2xl">
+      <Card className="w-full max-w-2xl border-none shadow-2xl">
         <CardHeader className="text-center">
           <CardTitle className="bg-gradient-to-r from-pink-600 to-blue-600 text-white p-2 rounded text-xl font-extrabold">Mental Health Assessment</CardTitle>
           <CardDescription className="text-xl">
