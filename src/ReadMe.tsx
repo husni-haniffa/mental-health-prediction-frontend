@@ -11,10 +11,10 @@ import {
 
 const ReadMe = () => {
   return (
-    <Card className="w-full max-w-md border-none shadow-2xl">
-      <CardHeader>
+    <Card className="w-full max-w-3xl border-none shadow-2xl">
+      <CardHeader className="text-xl">
         <CardTitle className="text-red-600">Read Me!</CardTitle>
-        <CardDescription className="text-green-600 font-bold">
+        <CardDescription className="text-green-600 font-bold text-lg">
           Please fill the form according to the format given below
         </CardDescription>
       </CardHeader>
@@ -24,8 +24,8 @@ const ReadMe = () => {
           {fieldGuide.map((field) => (
             <div key={field.title} className="space-y-2">
               <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-2">
-                <Label className="font-semibold">{field.title}</Label>
-                <Label className="text-muted-foreground">{field.description}</Label>
+                <Label className="font-semibold text-xl">{field.title}</Label>
+                <Label className="text-muted-foreground text-lg">{field.description}</Label>
               </div>
 
               <div className="flex flex-wrap gap-2">
@@ -34,7 +34,7 @@ const ReadMe = () => {
                     <Badge
                       key={option.value}
                       variant="secondary"
-                      className="bg-blue-500 text-white dark:bg-blue-600"
+                      className="bg-blue-500 text-white dark:bg-blue-600 text-lg"
                     >
                       {option.label} - {option.value}
                     </Badge>
