@@ -8,3 +8,15 @@
 ```bash
 git clone https://github.com/husni-haniffa/mental-health-prediction-frontend
 ```
+2. **Navigate into the project folder**
+```bash
+cd mental-health-prediction-frontend
+```
+2. **Install dependencies**
+```bash
+npm install
+```
+3. **Run the development serve**
+```bash
+npm run dev
+```
