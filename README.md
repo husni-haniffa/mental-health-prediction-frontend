@@ -16,7 +16,10 @@ cd mental-health-prediction-frontend
 ```bash
 npm install
 ```
-3. **Run the development serve**
+3. **Run the development server**
 ```bash
 npm run dev
 ```
+4. **Open in your browser**
+Visit: http://localhost:5173
+
